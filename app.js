@@ -8,7 +8,7 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementsByClassName("new-task-input")[0];//Add a new task.
+var taskInput=document.getElementsByClassName("new-task__input")[0];//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
 var incompleteTaskHolder=document.getElementsByClassName("incomplete-tasks")[0];//ul of .incompleteTasks
 var completedTasksHolder=document.getElementsByClassName("completed-tasks")[0];//completed-tasks
@@ -33,21 +33,21 @@ var createNewTaskElement=function(taskString){
   var deleteButtonImg=document.createElement("img");//delete button image
 
   label.innerText=taskString;
-  label.className="task task-label";
+  label.className="task task__label";
 
   //Each elements, needs appending
   checkBox.type="checkbox";
-  checkBox.className="checkbox-input";
+  checkBox.className="checkbox__input";
   editInput.type="text";
-  editInput.className="task task-input";
-  listItem.className="style-task";
+  editInput.className="task task__input";
+  listItem.className="style__task";
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className="edit style-btn";
+  editButton.className="edit style__btn";
 
-  deleteButton.className="delete style-btn";
+  deleteButton.className="delete style__btn";
   deleteButtonImg.src="./remove.svg";
-  deleteButtonImg.className="remove-img";
+  deleteButtonImg.className="remove__img";
   deleteButton.appendChild(deleteButtonImg);
 
 
@@ -126,7 +126,7 @@ var taskCompleted=function(){
   var listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
   var label=listItem.querySelector("label");
-  label.className="task complete task-label";
+  label.className="task complete task__label";
   bindTaskEvents(listItem, taskIncomplete);
 
 }
@@ -140,7 +140,7 @@ var taskIncomplete=function(){
   var listItem=this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   var label=listItem.querySelector("label");
-  label.className="task task-label";
+  label.className="task task__label";
   bindTaskEvents(listItem,taskCompleted);
 }
 

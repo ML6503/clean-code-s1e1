@@ -125,6 +125,8 @@ var taskCompleted=function(){
   //Append the task list item to the #completed-tasks
   var listItem=this.parentNode;
   completedTasksHolder.appendChild(listItem);
+  var label=listItem.querySelector("label");
+  label.className="task complete task-label";
   bindTaskEvents(listItem, taskIncomplete);
 
 }

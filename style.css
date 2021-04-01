@@ -16,7 +16,7 @@ h1 {
   margin: 0;
 }
 
-.eisenhower-matrix-wrapper img {
+.eisenhower-matrix-img {
   width: 100%;
 }
 
@@ -79,8 +79,7 @@ button {
 }
 
 /* Heading */
-h3,
-label[for="new-task"] {
+.task-header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -90,7 +89,7 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task-input {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -103,7 +102,7 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task-input:focus {
   color: #333;
 }
 
@@ -113,7 +112,7 @@ input[type="text"]:focus {
   margin: 0 0 20px;
 }
 
-input#new-task {
+#new-task {
   width: 318px;
 }
 
